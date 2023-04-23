@@ -4,6 +4,7 @@ import { BsChevronDown, BsSearch, BsBell } from "react-icons/bs";
 import MobileMenu from "./MobileMenu";
 import NavbarItem from "./NavbarItem";
 import AccountMenu from "./AccountMenu";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 const TOP_OFFSET = 66;
 
@@ -34,6 +35,7 @@ const Navbar = () => {
     setShowAccountMenu((current) => !current);
   }, []);
 
+  const { data } = useCurrentUser();
   return (
     <nav className="w-full fixed z-40">
       <div
@@ -73,7 +75,7 @@ const Navbar = () => {
               onClick={toggleAccounMenu}
               className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden"
             >
-              <img src="/images/default-red.png" alt="profile" />
+              <img src={data?.image} alt="profile" />
             </div>
             <BsChevronDown
               className={`text-white transition ${

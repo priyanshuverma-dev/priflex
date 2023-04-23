@@ -57,7 +57,7 @@ const profiles = () => {
               overflow-hidden
               "
               >
-                <img src="/images/default-red.png" alt="Profile" />
+                <img src={user?.image} alt="Profile" />
               </div>
               <div
                 className="

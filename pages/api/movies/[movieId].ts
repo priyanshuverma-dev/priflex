@@ -10,12 +10,30 @@ export default async function handler(
   if (req.method !== "GET") {
     return res.status(405).end();
   }
+
   try {
     await serverAuth(req, res);
 
-    const movies = await prismadb.movie.findMany();
+    const { movieId } = req.query;
 
-    return res.status(200).json(movies);
+    if (typeof movieId !== "string") {
+      throw new Error("Invalid Id");
+    }
+
+    if (!movieId) {
+      throw new Error("Invalid Id");
+    }
+
+    const movie = await prismadb.movie.findUnique({
+      where: {
+        id: movieId,
+      },
+    });
+
+    if (!movie) {
+      throw new Error("Invalid Id");
+    }
+    return res.status(200).json(movie);
   } catch (error) {
     console.log(error);
     return res.status(400).end();
