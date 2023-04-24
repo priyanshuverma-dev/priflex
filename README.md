@@ -12,4 +12,4 @@ A Netflix like web app allows you to watch cartoons and shows for free.
 
 I'm a full stack developer...
 
-![Logo](pubilc/images/logo.png)
+![Logo](https://raw.githubusercontent.com/devpriyanshuu/preflex/master/public/images/logo.png)
