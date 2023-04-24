@@ -4,7 +4,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
-import Input from "@/components/input";
+import Input from "@/components/Input";
 
 const Auth = () => {
   const router = useRouter();
@@ -31,7 +31,7 @@ const Auth = () => {
     } catch (error) {
       console.log(error);
     }
-  }, [email, password, router]);
+  }, [email, password]);
 
   const register = useCallback(async () => {
     try {
