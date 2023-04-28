@@ -14,7 +14,8 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
   const router = useRouter();
 
   const { openModal } = useInfoModal();
-
+  const IMG_URL =
+    "https://res.cloudinary.com/priyanshu-verma/image/upload/v1682688237/thumbs-priflix";
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
       <img
@@ -31,7 +32,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
         w-full
         h-[12vw]
       "
-        src={data.thumbnailUrl}
+        src={`${IMG_URL}/${data.thumbnailUrl}`}
         alt={data.title}
       />
       <div

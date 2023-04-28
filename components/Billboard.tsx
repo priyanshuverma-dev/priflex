@@ -12,6 +12,9 @@ const Billboard = () => {
     openModal(data?.id);
   }, [openModal, data?.id]);
 
+  const IMG_URL =
+    "https://res.cloudinary.com/priyanshu-verma/image/upload/v1682688237/thumbs-priflix";
+
   return (
     <div className="relative h-[56.25vw]">
       <video
@@ -24,7 +27,7 @@ const Billboard = () => {
         autoPlay
         muted
         loop
-        poster={data?.thumbnailUrl}
+        poster={`${IMG_URL}/${data?.thumbnailUrl}`}
         src={data?.videoUrl}
       ></video>
       <div className="absolute top-[30%] md:top-[40%] ml-4 md:ml-16">
