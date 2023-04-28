@@ -52,10 +52,10 @@ const Auth = () => {
         </nav>
         <div className="flex justify-center">
           <div className="bg-black bg-opacity-70  px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
-            <h2 className="text-white text-4xl mb-8 font-semibold">
+            {/* <h2 className="text-white text-4xl mb-8 font-semibold">
               {variant === "login" ? "Sign in" : "Create an Account"}
             </h2>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 hidden">
               {variant === "register" && (
                 <Input
                   id="name"
@@ -93,7 +93,7 @@ const Auth = () => {
             "
             >
               {variant === "login" ? "Login" : "Create account"}
-            </button>
+            </button> */}
             <div className="flex flex-row items-center gap-4 mt-8 justify-center">
               <div
                 onClick={() => signIn("google", { callbackUrl: "/profiles" })}
