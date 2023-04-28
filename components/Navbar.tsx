@@ -5,7 +5,6 @@ import MobileMenu from "./MobileMenu";
 import NavbarItem from "./NavbarItem";
 import AccountMenu from "./AccountMenu";
 import useCurrentUser from "@/hooks/useCurrentUser";
-import { useRouter } from "next/router";
 
 const TOP_OFFSET = 66;
 
@@ -13,7 +12,6 @@ const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [ShowBackround, setShowBackround] = useState(false);
-  const router = useRouter();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= TOP_OFFSET) {
@@ -46,7 +44,7 @@ const Navbar = () => {
       >
         <img src="/images/logo.png" alt="logo" className="h-4 lg:h-7" />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
-          <NavbarItem onClick={() => router.push("/")} label="Home" />
+          <NavbarItem label="Home" />
         </div>
         <div
           onClick={toggleMobileMenu}
