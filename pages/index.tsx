@@ -31,6 +31,9 @@ export default function Home() {
   const { isOpen, closeModal } = useInfoModal();
   return (
     <>
+      <head>
+        <title>Priflix || Prototype</title>
+      </head>
       <InfoModal onClose={closeModal} visible={isOpen} />
       <Navbar />
       <Billboard />

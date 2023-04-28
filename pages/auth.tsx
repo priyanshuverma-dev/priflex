@@ -45,14 +45,18 @@ const Auth = () => {
   }, [email, name, password, login]);
 
   return (
-    <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-      <div className="bg-black w-full h-full lg:bg-opacity-50">
-        <nav className="px-12 py-5">
-          <img src="/images/logo.png" alt="logo" className="h-12" />
-        </nav>
-        <div className="flex justify-center">
-          <div className="bg-black bg-opacity-70  px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
-            {/* <h2 className="text-white text-4xl mb-8 font-semibold">
+    <>
+      <head>
+        <title>Login</title>
+      </head>
+      <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+        <div className="bg-black w-full h-full lg:bg-opacity-50">
+          <nav className="px-12 py-5">
+            <img src="/images/logo.png" alt="logo" className="h-12" />
+          </nav>
+          <div className="flex justify-center">
+            <div className="bg-black bg-opacity-70  px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
+              {/* <h2 className="text-white text-4xl mb-8 font-semibold">
               {variant === "login" ? "Sign in" : "Create an Account"}
             </h2>
             <div className="flex flex-col gap-4 hidden">
@@ -94,10 +98,10 @@ const Auth = () => {
             >
               {variant === "login" ? "Login" : "Create account"}
             </button> */}
-            <div className="flex flex-row items-center gap-4 mt-8 justify-center">
-              <div
-                onClick={() => signIn("google", { callbackUrl: "/profiles" })}
-                className="w-10
+              <div className="flex flex-row items-center gap-4 mt-8 justify-center">
+                <div
+                  onClick={() => signIn("google", { callbackUrl: "/profiles" })}
+                  className="w-10
                 h-10 
                 bg-white 
                 rounded-full 
@@ -108,12 +112,12 @@ const Auth = () => {
                 hover:opacity-80 
                 transition
               "
-              >
-                <FcGoogle size={30} />
-              </div>
-              <div
-                onClick={() => signIn("github", { callbackUrl: "/profiles" })}
-                className="w-10
+                >
+                  <FcGoogle size={30} />
+                </div>
+                <div
+                  onClick={() => signIn("github", { callbackUrl: "/profiles" })}
+                  className="w-10
                 h-10 
                 bg-white 
                 rounded-full 
@@ -124,35 +128,36 @@ const Auth = () => {
                 hover:opacity-80 
                 transition
               "
-              >
-                <FaGithub size={30} />
+                >
+                  <FaGithub size={30} />
+                </div>
               </div>
-            </div>
-            <p
-              className="
+              <p
+                className="
                 text-neutral-500
                 mt-12
             "
-            >
-              {variant === "login"
-                ? "First time using Preflix?"
-                : "Already have account?"}
-              <span
-                className="
+              >
+                {variant === "login"
+                  ? "First time using Preflix?"
+                  : "Already have account?"}
+                <span
+                  className="
                 text-white
                 ml-1
                 hover:underline
                 cursor-pointer
                 "
-                onClick={toggleVariant}
-              >
-                {variant === "register" ? "login" : "Create an account"}
-              </span>
-            </p>
+                  onClick={toggleVariant}
+                >
+                  {variant === "register" ? "login" : "Create an account"}
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Auth;
