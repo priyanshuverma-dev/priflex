@@ -65,7 +65,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
           w-full
           h-[12vw]
         "
-          src={data.thumbnailUrl}
+          src={`${IMG_URL}/${data.thumbnailUrl}`}
           alt={data.title}
         />
         <div
