@@ -6,7 +6,7 @@ A Netflix like web app allows you to watch cartoons and shows for free.
 
 **Client:** React, Next, TailwindCSS
 
-**Server:** Mongodb, Prisma
+**Server:** Mongodb, Prisma, Next Auth
 
 ## 🚀 About Me
 
